@@ -1,5 +1,5 @@
 # StudentApp-CRUD
-## This application consist of CRUD Operations for Student.
+## This application consist of CRUD(Create, Read, Update and Delete) Operations for Student Application.
 ## Functionality includes:
   - SignUp and Login for Admin
   - Add Student.
