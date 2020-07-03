@@ -26,6 +26,7 @@
 - Go to browser ```https:\\localhost:4200``  and you can see Login Page. Hurray!!!!
 ### Student App Back-end
 - Open a new terminal (Note: Keep the Front-end terminal as it is).
+- Go to folder *student-back-end*
 - Run: ```npm i``` to download the dependencies
 - Run: ```npm start``` to start the server
  
