@@ -10,7 +10,7 @@
 - Clone the repository:
 ```git clone https://github.com/tejashreeSalvi/StudentApp-CRUD.git```
 ## Database MongoDB Atlas setup guidelines
-- Create a account on MongoDB Atlas
+- Create a account on *[MongoDB Atlas](https://account.mongodb.com/account/login)
 - Create a Cluster
 - After Cluster is created In Data Storage, Go to Clusters -> Click on connect
 - Choose the Connection Method: Click on Connect your application
