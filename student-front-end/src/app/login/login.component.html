@@ -1,0 +1,58 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<div class="row mx-4 my-4 justify-content-center">
+  <div class="col-lg-6 col-md-12 col-sm-12 colnm shadow p-3">
+    <form class="formGroup" [formGroup]="loginForm" class="colum">
+
+        <h2>Login</h2>
+
+        <!-- Email ID -->
+        <div class="form-group">
+          <label class="alert-link control-label" for="exampleInputPassword1">Email Id: </label>
+          <input required [class.is-invalid]="loginForm.get('email').invalid && loginForm.get('email').touched"
+            formControlName="email" type="email" class="form-control" name="Email"
+            pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$">
+
+          <div class="help-block text-danger" *ngIf="email.invalid && (email.dirty || email.touched)">Please enter Email
+            Id
+          </div>
+          <div class="help-block text-danger" *ngIf="email.errors?.pattern"><br>You can use letters, numbers, periods and
+            underscore</div>
+        </div>
+        <!-- Email ID -->
+
+        <!-- Password -->
+        <div class="form-group">
+          <label class="alert-link control-label" for="exampleInputPassword1">Password: </label>
+          <div class="input-group">
+            <input required [class.is-invalid]="loginForm.get('password').invalid && loginForm.get('password').touched"
+              data-toggle="password" formControlName="password" type="{{typePassword}}" class="form-control" name="Password"
+              pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*]).{8,}">
+            <div class="input-group-append">
+              <div class="input-group-text bg-white inpgrpapp"><span class="material-icons" (click)="toggle()">
+                  {{togglePassword}}
+                </span></div>
+            </div>
+          </div>
+          <div class="help-block text-danger" *ngIf="password.errors && (password.dirty || password.touched)">Please enter
+            valid
+            Password
+          </div>
+          <div class="help-block text-danger" *ngIf="password.errors?.pattern"><br>Use 8 or more characters with a mix of
+            letters,
+            numbers & symbols ;)</div>
+        </div>
+        <!-- Password -->
+
+        <!-- Register Button -->
+        <button [disabled]="loginForm.invalid" type="submit"
+          [ngStyle]="{cursor: loginForm.invalid? 'no-drop': 'pointer'}"
+          class="btn btn-primary btn-block btn-group-lg mt-4 " (click)="onLoginClick()">Login </button>
+        <!-- Register Button -->
+        <div class="form-group float-right mt-3">
+          <a (click)="onRegisterClick()">New User? <span class="login">Register</span>
+          </a>
+        </div>
+
+    </form>
+  </div>
+</div>

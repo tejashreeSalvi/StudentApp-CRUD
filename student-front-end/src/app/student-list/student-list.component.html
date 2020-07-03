@@ -1,0 +1,58 @@
+<!-- Material Icons for password eye -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<!-- Material Icons for password eye -->
+
+<!-- List of Student UI -->
+<div class="container-12 mx-4 my-4">
+
+  <!-- Search and Add Student -->
+  <div class="row p-3 mb-2 bg-light text-white">
+    <div class="col-md-12 col-sm-12 col-lg-12 col-xs-12">
+      <form class="form-inline justify-content-end">
+        <div class="my-2 mx-2 my-sm-0">
+          <button type="button" (click)="addStudent()" class="btn btn-primary float-center"> Add Student</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <!-- Search and Add Student -->
+
+  <!-- Filter and list of Student Table -->
+  <div class="row border-top border-primary">
+    <!-- Table of student list -->
+    <div class="col-md-12 col-sm-12 col-lg-12 col-xs-12">
+      <h2 class="text-center text-monospace text-secondary">List of Student</h2>
+      <div class="card shadow border-white mb-1">
+        <div class="card-body">
+          <table class="table text-center table-bordered table-hover uk-table-condensed">
+            <thead class="table-primary active">
+              <tr>
+                <th scope="col">Sr.No</th>
+                <th scope="col">Firstname</th>
+                <th scope="col">Lastname</th>
+                <th scope="col">Email</th>
+                <th scope="col">Actions</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="text-center" *ngFor="let item of students; let i = index">
+                <th scope="row">{{i+1}}</th>
+                <td>{{item.firstName}}</td>
+                <td>{{item.lastName}}</td>
+                <td>{{item.email}}</td>
+                <td><button (click)="editStudent(item._id)" class="btn btn-warning">Edit</button>
+                </td>
+                <td><button (click)="deleteStudent(item._id)" class="btn btn-danger">Delete</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <!-- Table of student list -->
+  </div>
+  <!-- Filter and list of Student Table -->
+</div>
+<!-- List of Student UI -->
+
